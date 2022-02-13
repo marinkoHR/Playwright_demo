@@ -1,6 +1,5 @@
 package TESTS.MainTask;
 
-import MAPPINGS.SysKitNavigationMappings;
 import PAGES.*;
 import STRINGS.Credentials;
 import STRINGS.SysKitActionDetailPageStrings;
