@@ -13,7 +13,7 @@ public class SysKitUsersPageStrings {
                 + "you remove them manually. After users get permanently deleted, assigned licenses get freed up.";
     }
 
-    public static class Toastify {
+    public static class ToastNotification {
 
         public static String sExpectedTitleDeleteUser = "Delete User";
         public static String sExpectedMessageDeleteUserProgress = "Action started. You can check the progress in the notification panel.";

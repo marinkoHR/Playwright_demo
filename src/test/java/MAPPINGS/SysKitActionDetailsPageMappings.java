@@ -4,12 +4,6 @@ import STRINGS.SysKitActionDetailPageStrings;
 
 public class SysKitActionDetailsPageMappings extends SysKitActionDetailPageStrings {
 
-    public static class Navigation {
-
-        public static String mHomeButton = "div.navigation-home-button__content";
-        public static String mUsersNavigationButton = "#navigation-bubble > div > a#Users";
-    }
-
     public static String mActionDetailsTitle = "div.notification-info__action";
 
     public static String mPerformedBy = "div.grande-details-label__content.default-label:nth-child(1) > div.grande-details-label__description.default-label > div.grande-details-label__description__text.default-label";

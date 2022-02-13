@@ -16,7 +16,7 @@ public class SysKitUsersPageMappings {
         public static String mButtonDeleteUser = "div.generic-dialog__footer > button.button.primary";
     }
 
-    public static class Toastify extends SysKitUsersPageStrings.Toastify {
+    public static class ToastNotification extends SysKitUsersPageStrings.ToastNotification {
 
         public static String mToastifyTitle = "div.Toastify__toast-body > div > div > div.title";
         public static String mToastifyMessage = "div.Toastify__toast-body > div > div > div.message";

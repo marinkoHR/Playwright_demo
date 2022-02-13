@@ -14,7 +14,8 @@ public class SysKitSignInPage extends SysKitSignInPageMappings {
             page.fill(mPassword, sPassword);
             page.click(mButtonSignIn);
             page.waitForLoadState(LoadState.NETWORKIDLE);
-            if (page.isVisible(mDoNotShowAgainCheckbox)) page.click(mButtonNoForStaySignedIn);
+            if (page.isVisible(mDoNotShowAgainCheckbox))
+                page.click(mButtonNoForStaySignedIn);
             return success;
         });
     }

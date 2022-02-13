@@ -18,14 +18,18 @@ public class ErrorHandler {
 
         try {
             success = doWork.apply(success);
-            if (success.exception != null) throw success.exception;
-            System.out.println("PASSED: " + sMethodDescription);
+            if (success.exception != null)
+                throw success.exception;
+            System.out.println(Tools.sTerminalColorGreen + "PASSED: " + sMethodDescription + Tools.sTerminalColorReset);
         } catch (Exception e) {
             success.bSuccess = false;
-            System.out.println("FAILED: " + sMethodDescription);
+            System.out.println(Tools.sTerminalColorRed + "FAILED: " + sMethodDescription);
             success.exception = e;
+            System.out.println(
+                    "\tDETAILS: " + success.exception.getMessage().replace("\n", "\n\t") + Tools.sTerminalColorReset);
             softAssert.assertTrue(false, success.exception.getMessage());
-            if (bFailTest) testEnd();
+            if (bFailTest)
+                testEnd();
         }
     }
 

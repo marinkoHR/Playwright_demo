@@ -12,4 +12,11 @@ public class SysKitDashboardPage extends SysKitDashboardPageMappings {
             return success;
         });
     }
+
+    public static void clickAlerts(Page page) {
+        ErrorHandler.errorWrapper("Click on button Alerts on the SysKit dashboard", true, success -> {
+            page.click(mButtonAlerts);
+            return success;
+        });
+    }
 }

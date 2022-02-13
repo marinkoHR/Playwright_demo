@@ -18,18 +18,17 @@ public class Initialize {
         CHROME, FIREFOX
     }
 
-    public Initialize(BrowserToOpen browserToOpen) {
+    public Initialize(BrowserToOpen browserToOpen, boolean bHeadless) {
 
-        Logger.getLogger("org.testng").setLevel(Level.OFF);
         playwright = Playwright.create();
         switch (browserToOpen) {
             case CHROME:
                 browser =
-                        playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(List.of("--start-maximized")));
+                        playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(bHeadless).setArgs(List.of("--start-maximized")));
                 browserContext = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
                 break;
             case FIREFOX:
-                browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+                browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(bHeadless));
                 browserContext = browser.newContext();
                 break;
             default:
